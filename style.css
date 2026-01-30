@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  height: 90vh;
+  width: 50vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: system-ui;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: rgb(29, 29, 29);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(42, 73, 132);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  gap: 3em;
+}
+
+.Search-btn {
+  padding: 0.7em 1.5em 0.7em 1.5em;
+  color: black;
+  border-radius: 1em;
+  margin-left: 1em;
+  font-weight: 600;
+  border: 0.09em solid black;
+}
+
+.Weather-box {
+  display: flex;
+  gap: 2em;
+}
+
+.Temprature {
+  color: white;
+  font-size: 4em;
+  padding: 0;
+  font-weight: bold;
+}
+
+.Location {
+  color: white;
+  font-size: 4em;
+  margin: 0;
+}
+
+.time, .day, .date, .condition {
+    color: white;
+}
+
+.time-data {
+    display: flex;
+    gap: 0.8em;
+    justify-content: center;
+    padding: 1em 0em;
+    flex-direction: column;
+    color: white;
+}
+
+.weather-status {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input:focus {
+  outline: none;
+  outline-offset: 2px;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <nav>
+      <input
+        class="location-input"
+        type="text"
+        name=""
+        id=""
+        placeholder="Enter Location"
+        style="
+          border: none;
+          border-bottom: 0.25em solid cadetblue;
+          padding: 1em;
+          border-radius: 0em;
+          background-color: transparent;
+          color: white;
+          
+        "
+      />
+      <button class="Search-btn">Search</button>
+    </nav>
+    <div class="main-content">
+      <div class="Weather-box">
+        <div>
+          <span class="Temprature">12°C</span>
+        </div>
+        <div class="location-data">
+          <div class="Location"><span>Delhi</span></div>
+          <div class="time-data">
+            <div>
+                <span class="time">9:15</span>
+                <span class="day">Friday</span>
+            </div>
+            <div>
+               <span style="font-weight: 600;">January 30, 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="weather-status">
+          <div class="icon">
+            <img
+              src="//cdn.weatherapi.com/weather/64x64/night/143.png"
+              alt="weather-status-icon"
+            />
+          </div>
+          <div class="condition">Sunny</div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
