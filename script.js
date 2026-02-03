@@ -23,7 +23,7 @@ searchBtn.addEventListener("click", () => {
   input.value = ""
 })
 
-
+// Fetch weather data from OpenWeatherMap API
 async function getWeatherData(city) {
   try {
     const response = await fetch(
@@ -39,11 +39,16 @@ async function getWeatherData(city) {
   }
 }
 
-
+// Update the UI with fetched weather data
 function updateUI(data) {
   document.querySelector(".Temprature").innerText = `${Math.round(data.main.temp)}°C`;
   document.querySelector(".condition").innerText = data.weather[0].main;
   document.querySelector(".Location").innerText = data.name;
   const iconCode = data.weather[0].icon;
+  document.querySelector(".time").innerText = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  document.querySelector(".day").innerText = new Date().toLocaleDateString([], { weekday: 'long' });
+  document.querySelector(".date").innerText = new Date().getDate();
+  document.querySelector(".month").innerText = new Date().toLocaleDateString([], { month: 'long' });
+  document.querySelector(".year").innerText = new Date().getFullYear();
   document.querySelector(".icon img").src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
